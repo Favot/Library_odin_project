@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>My Library</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <div id="page-banner">
+          <h1 class="title">EBook</h1>
+          <p>Books I need to learn Code</p>
+          <form id="search-books">
+            <input type="text" placeholder="Search books..." />
+          </form>
+        </div>
+      </header>
+      <div id="book-list">
+        <h2 class="title">Books to Read</h2>
+        <ul></ul>
+      </div>
+      <div id="hide">
+        <input type="checkbox" id="hide-book-read" />
+        <label for="hide">Hide books already read</label><br />
+        <input type="checkbox" id="hide-book-not-read" />
+        <label for="hide">Hide all books not read yead</label>
+      </div>
+      <div id="tabbed-content">
+        <ul class="tabs">
+          <li data-target="#add-book-form" class="active">Add Book</li>
+        </ul>
+        <div class="panel" id="add-book-form">
+          <form id="add-book">
+            <div id="add-book-form-content">
+              <label>Author</label>
+              <input type="text" value="" required />
+              <label>Title</label>
+              <input type="text" required />
+              <label>Year</label>
+              <input type="number" required />
+              <label>Did you read this book?</label><br />
+              <input type="radio" name="read" value="Yes" required />Yes<br />
+              <input type="radio" name="read" value="No" required />No<br />
+              <button>Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
